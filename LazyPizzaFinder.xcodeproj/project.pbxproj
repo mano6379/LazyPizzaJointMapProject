@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D09ADB6A18E45E2000849D30 /* PizzaPlaceAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D09ADB6918E45E2000849D30 /* PizzaPlaceAnnotation.m */; };
+		D09D567F18E9EDC4009036A1 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D09D567E18E9EDC4009036A1 /* MapViewController.m */; };
+		D0E874E218E90C7500925AC3 /* PizzaPlaceAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = D0E874E118E90C7500925AC3 /* PizzaPlaceAnnotation.m */; };
 		D0EB745E18E35AE800211581 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EB745D18E35AE800211581 /* Foundation.framework */; };
 		D0EB746018E35AE800211581 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EB745F18E35AE800211581 /* CoreGraphics.framework */; };
 		D0EB746218E35AE800211581 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EB746118E35AE800211581 /* UIKit.framework */; };
@@ -37,8 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D09ADB6818E45E2000849D30 /* PizzaPlaceAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PizzaPlaceAnnotation.h; sourceTree = "<group>"; };
-		D09ADB6918E45E2000849D30 /* PizzaPlaceAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PizzaPlaceAnnotation.m; sourceTree = "<group>"; };
+		D09D567D18E9EDC4009036A1 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		D09D567E18E9EDC4009036A1 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		D0E874E018E90C7500925AC3 /* PizzaPlaceAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PizzaPlaceAnnotation.h; sourceTree = "<group>"; };
+		D0E874E118E90C7500925AC3 /* PizzaPlaceAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PizzaPlaceAnnotation.m; sourceTree = "<group>"; };
 		D0EB745A18E35AE800211581 /* LazyPizzaFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyPizzaFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0EB745D18E35AE800211581 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D0EB745F18E35AE800211581 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -126,10 +129,12 @@
 				D0EB746C18E35AE800211581 /* AppDelegate.h */,
 				D0EB746D18E35AE800211581 /* AppDelegate.m */,
 				D0EB746F18E35AE800211581 /* Main.storyboard */,
+				D09D567D18E9EDC4009036A1 /* MapViewController.h */,
+				D09D567E18E9EDC4009036A1 /* MapViewController.m */,
 				D0EB747218E35AE800211581 /* ViewController.h */,
 				D0EB747318E35AE800211581 /* ViewController.m */,
-				D09ADB6818E45E2000849D30 /* PizzaPlaceAnnotation.h */,
-				D09ADB6918E45E2000849D30 /* PizzaPlaceAnnotation.m */,
+				D0E874E018E90C7500925AC3 /* PizzaPlaceAnnotation.h */,
+				D0E874E118E90C7500925AC3 /* PizzaPlaceAnnotation.m */,
 				D0EB747518E35AE800211581 /* Images.xcassets */,
 				D0EB746418E35AE800211581 /* Supporting Files */,
 			);
@@ -264,8 +269,9 @@
 			files = (
 				D0EB747418E35AE800211581 /* ViewController.m in Sources */,
 				D0EB746E18E35AE800211581 /* AppDelegate.m in Sources */,
+				D09D567F18E9EDC4009036A1 /* MapViewController.m in Sources */,
 				D0EB746A18E35AE800211581 /* main.m in Sources */,
-				D09ADB6A18E45E2000849D30 /* PizzaPlaceAnnotation.m in Sources */,
+				D0E874E218E90C7500925AC3 /* PizzaPlaceAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

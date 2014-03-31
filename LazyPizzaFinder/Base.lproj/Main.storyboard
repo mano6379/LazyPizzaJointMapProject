@@ -77,7 +77,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nGh-Tx-aqj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1330" y="409"/>
+            <point key="canvasLocation" x="954" y="421"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="16j-Rp-1JM">
@@ -102,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="70W-Lb-Qlj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1757" y="407"/>
+            <point key="canvasLocation" x="1337" y="421"/>
         </scene>
         <!--Navigation Controller - My Pizza Places-->
         <scene sceneID="BiN-70-dHm">
@@ -121,7 +121,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s9b-XN-IGN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1330" y="-252"/>
+            <point key="canvasLocation" x="1423" y="-401"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="pec-7z-6bT">

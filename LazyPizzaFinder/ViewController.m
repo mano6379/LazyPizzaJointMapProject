@@ -20,7 +20,6 @@
     double timeToVisitAllShops;
 }
 @property CLLocationManager *locationManager;
-//@property MKPinAnnotationView *pizzaPlacesAnnotation;
 @end
 
 @implementation ViewController
@@ -37,74 +36,28 @@
     timeToVisitAllShops = 9000;
     self.locationManager = [CLLocationManager new];
     self.locationManager.delegate = self;
+    myView.delegate = self;
     [self.locationManager startUpdatingLocation];
     pizzaPlaces = [NSMutableArray new];
-    
-    for (NSArray *places in pizzaPlaces)
-    
+}
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+    if (annotation == mapView.userLocation)
     {
-        
-        PizzaPlaceAnnotation *annotation = [PizzaPlaceAnnotation new];
-        
-        
-        //annotation.coordinate = MKMapItem.placem
-        
-        
-        
-        
-        //[myView addAnnotation:annotation];
+        return nil;
     }
     
-    //code I just added from GetOnBus Project
+    // Set pin image attributes
+    MKPinAnnotationView *pin = [[MKPinAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:nil];
+    //pin.image = [UIImage imageNamed:@"Chicago-1"];
+    pin.canShowCallout = YES;
+    pin.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     
-//    NSArray *pizzaPlaces = myMapDictionary[@"row"];
-//    NSLog(@"%@", myTransitStops);
-//    
-//    for (NSDictionary *stop in myTransitStops)
-//    {
-//        double latitude = [stop[@"latitude"]doubleValue];
-//        double longitude = [stop[@"longitude"]doubleValue];
-//        
-//        CLLocationCoordinate2D centerCoordinate = CLLocationCoordinate2DMake(latitude, longitude);
-//        BusStopAnnotation *annotation = [BusStopAnnotation new];
-//        annotation.coordinate = centerCoordinate;
-//        annotation.busStopDictionary = stop;
-//        
-//        annotation.title = stop[@"cta_stop_name"];
-//        annotation.subtitle = stop[@"routes"];
-//        NSLog(@"Title %@", annotation.title);
-//        [self.myMapView addAnnotation:annotation];
-//    }
-//    
-//    
-//    CLLocationCoordinate2D averageCoordinate = CLLocationCoordinate2DMake(0, 0);
-//    
-//    for (NSDictionary *stop in myTransitStops)
-//    {
-//        double lat = [stop[@"latitude"] doubleValue];
-//        double lng = [stop[@"longitude"] doubleValue];
-//        
-//        averageCoordinate.latitude += lat;
-//        averageCoordinate.longitude += lng;
-//    }
-//    
-//    averageCoordinate.latitude /= myTransitStops.count;
-//    averageCoordinate.longitude /= myTransitStops.count;
-//    
-//    MKCoordinateSpan coordinateSpan = MKCoordinateSpanMake(0.4, 1.0);
-//    MKCoordinateRegion region = MKCoordinateRegionMake(averageCoordinate, coordinateSpan);
-//    self.myMapView.region = region;
-//    
-//}];
-//
-
+    return pin;
 }
 
-- (void)didReceiveMemoryWarning{
-    
-    [super didReceiveMemoryWarning];
 
-}
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return pizzaPlaces.count;
@@ -190,6 +143,18 @@
 
         pizzaPlaces = mapItems;
         [self calculateDistance:mapItems];
+        //everything in the array goes in as an id object
+        for (MKMapItem *place in pizzaPlaces)
+        {
+            //create a new annotation object
+            //CLLocationCoordinate2D centerCoordinate = CLLocationCoordinate2DMake(latitude,longitude);
+            MKPointAnnotation *annotation = [MKPointAnnotation new];
+            annotation.coordinate = place.placemark.location.coordinate;
+            
+            [myView addAnnotation:annotation];
+            
+        }
+        [myView reloadInputViews];
         [myTableView reloadData];
     }];
 }
