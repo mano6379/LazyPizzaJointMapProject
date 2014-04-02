@@ -150,7 +150,7 @@
             //CLLocationCoordinate2D centerCoordinate = CLLocationCoordinate2DMake(latitude,longitude);
             MKPointAnnotation *annotation = [MKPointAnnotation new];
             annotation.coordinate = place.placemark.location.coordinate;
-            
+            //make an array of annotations
             [myView addAnnotation:annotation];
             
         }
